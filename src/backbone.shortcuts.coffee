@@ -33,7 +33,7 @@ _.extend Shortcuts.prototype, Backbone.Events,
       match = shortcut.match(/^(\S+)\s*(.*)$/)
       shortcutKey = match[1]
       scope = if match[2] == "" then "all" else match[2]
-      return key(shortcutKey, scope, method)
+      key(shortcutKey, scope, method)
 
 Backbone.Shortcuts = Shortcuts
 Backbone.Shortcuts.extend = Backbone.View.extend

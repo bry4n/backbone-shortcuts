@@ -13,8 +13,12 @@
     var TestShortcuts;
     TestShortcuts = Backbone.Shortcuts.extend({
           shortcuts: {
-            "ctrl+r" : "reloadPage"
-            },
+              "ctrl+r" : "reloadPage",
+              "t" : "test"
+              },
+          test: function() {
+            alert("test");
+          },
           reloadPage: function() {
             alert("reload!");
           }

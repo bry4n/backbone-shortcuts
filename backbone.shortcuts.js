@@ -10,9 +10,10 @@
   _.extend(Shortcuts.prototype, Backbone.Events, {
     initialize: function() {},
     delegateShortcuts: function() {
-      var callback, match, method, scope, shortcut, shortcutKey, _ref;
+      var callback, match, method, scope, shortcut, shortcutKey, _ref, _results;
       if (!this.shortcuts) return;
       _ref = this.shortcuts;
+      _results = [];
       for (shortcut in _ref) {
         callback = _ref[shortcut];
         if (!_.isFunction(callback)) method = this[callback];
@@ -20,8 +21,9 @@
         match = shortcut.match(/^(\S+)\s*(.*)$/);
         shortcutKey = match[1];
         scope = match[2] === "" ? "all" : match[2];
-        return key(shortcutKey, scope, method);
+        _results.push(key(shortcutKey, scope, method));
       }
+      return _results;
     }
   });
 
