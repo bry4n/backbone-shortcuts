@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title>test</title>
+  <script type="text/javascript" src="https://raw.github.com/douglascrockford/JSON-js/master/json2.js"></script>
+  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+  <script type="text/javascript" src="http://backbonejs.org/backbone-min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/madrobby/keymaster/master/keymaster.min.js"></script>
+  <script type="text/javascript" src="backbone.shortcuts.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var TestShortcuts;
+    TestShortcuts = Backbone.Shortcuts.extend({
+          shortcuts: {
+            "ctrl+r" : "reloadPage"
+            },
+          reloadPage: function() {
+            alert("reload!");
+          }
+          });
+    var shortcuts = new TestShortcuts
+  </script>
+</head>
+<body>
+  Backbone.Shortcuts!
+  <br />
+  Demo: press Ctrl+R now!
+</body>
+</html>
