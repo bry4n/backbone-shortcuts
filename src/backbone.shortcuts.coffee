@@ -26,7 +26,6 @@ Shortcuts = (options) ->
 _.extend Shortcuts.prototype, Backbone.Events,
   initialize: ->
   delegateShortcuts: ->
-    console.log 'delegate shortcuts'
     return unless @shortcuts
     for shortcut, callback of @shortcuts
       method = @[callback] unless _.isFunction(callback)

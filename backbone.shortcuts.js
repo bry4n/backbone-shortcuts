@@ -11,7 +11,6 @@
     initialize: function() {},
     delegateShortcuts: function() {
       var callback, match, method, scope, shortcut, shortcutKey, _ref;
-      console.log('delegate shortcuts');
       if (!this.shortcuts) return;
       _ref = this.shortcuts;
       for (shortcut in _ref) {
