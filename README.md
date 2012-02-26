@@ -3,13 +3,13 @@
 Defines and dispatches the keyboard shortcuts
 
 ### Dependencies
-* [Underscore.js](http://underscorejs.org/)
-* [Backbone.js](http://backbonejs.org/)
-* [Keymaster.js](https://github.com/madrobby/keymaster/)
+* [Underscore.js ~> 1.3.1](http://underscorejs.org/)
+* [Backbone.js ~> 0.9.1](http://backbonejs.org/)
+* [Keymaster.js ~> 1.0.2](https://github.com/madrobby/keymaster/)
 
 # Usage
 
-**Javascript**
+**JavaScript**
 
 ```javascript
 var ShortcutKeys = Backbone.Shortcuts.extend({
