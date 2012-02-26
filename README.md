@@ -10,6 +10,7 @@ Defines and dispatches the keyboard shortcuts
 # Usage
 
 **HTML**
+
 ```html
 <script src="underscore.min.js"></script>
 <script src="backbone.min.js"></script>
