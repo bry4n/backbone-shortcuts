@@ -25,6 +25,7 @@ var shortcuts = new ShortcutKeys;
 ```
 
 **CoffeeScript**
+
 ```coffeescript
 class ShortcutKeys extends Backbone.Shortcuts
   shortcuts:
