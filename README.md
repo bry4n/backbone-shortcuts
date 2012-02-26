@@ -36,3 +36,6 @@ shortcuts = new ShortcutKeys
 ```
 
 Read [index.html](https://github.com/bry4n/backbone-shortcuts/blob/master/index.html)
+
+## Author
+Bryan Goines, [@bryangoines](http://twitter.com/bryangoines)
