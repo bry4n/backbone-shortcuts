@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Mocha</title>
+  <link rel="stylesheet" href="mocha.css" type="text/css" media="screen" charset="utf-8">
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+  <script type="text/javascript" src="http://backbonejs.org/backbone-min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/madrobby/keymaster/master/keymaster.min.js"></script>
+  <script type="text/javascript" src="../backbone.shortcuts.js"></script>
+  <script src="mocha.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://chaijs.com/chai.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script>
+    mocha.setup('tdd');
+    var assert = chai.assert
+  </script>
+  
+  <script src="test.js" type="text/javascript" charset="utf-8"></script>
+
+  <script>
+    onload = function() {
+      var runner = mocha.run()
+    };
+  </script>
+
+</head>
+<body>
+  <div id="mocha"></div>
+</body>
+</html>
