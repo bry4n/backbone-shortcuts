@@ -44,7 +44,7 @@ class ShortcutKeys extends Backbone.Shortcuts
 shortcuts = new ShortcutKeys
 ```
 
-Read [index.html](https://github.com/bry4n/backbone-shortcuts/blob/master/index.html)
+Read [example.html](https://github.com/bry4n/backbone-shortcuts/blob/master/example.html)
 
 ## Author
 Bryan Goines, [@bryangoines](http://twitter.com/bryangoines)

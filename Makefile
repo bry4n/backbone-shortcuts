@@ -1,5 +1,9 @@
-# npm install uglify-js -g
+# npm install -g uglify-js
+
 defaults:
 				coffee -o . src/
-				coffee -o test/ test/
 				uglifyjs -o backbone.shortcuts.min.js backbone.shortcuts.js
+
+test:
+				coffee -o test/ test/
+				open test/index.html
