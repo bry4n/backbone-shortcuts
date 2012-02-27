@@ -1,13 +1,19 @@
 # Backbone.Shortcuts
 
-Defines and dispatches the keyboard shortcuts
+*Backbone.js + Keymaster.js = Backbone.Shortcuts.*
 
-### Dependencies
+## Downloads
+
+  * [Development Version](https://raw.github.com/bry4n/backbone-shortcuts/master/backbone.shortcuts.js) 1.031 kb, full source code
+  * [Production Version](https://raw.github.com/bry4n/backbone-shortcuts/master/backbone.shortcuts.min.js) 0.577 kb, packed and gzipped
+
+## Dependencies
+
 * [Underscore.js ~> 1.3.1](http://underscorejs.org/)
 * [Backbone.js ~> 0.9.1](http://backbonejs.org/)
 * [Keymaster.js ~> 1.0.2](https://github.com/madrobby/keymaster/)
 
-# Usage
+## Usage
 
 **HTML**
 
