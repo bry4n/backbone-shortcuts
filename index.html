@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Backbone-shortcuts by bry4n</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Backbone-shortcuts</h1>
+<p>Backbone.js + Keymaster.js = Backbone.Shortcuts (Keyboard shortcuts)</p>
+        <p class="view"><a href="https://github.com/bry4n/backbone-shortcuts">View the Project on GitHub <small>bry4n/backbone-shortcuts</small></a></p>
+        <ul>
+          <li><a href="https://github.com/bry4n/backbone-shortcuts/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bry4n/backbone-shortcuts/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bry4n/backbone-shortcuts">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Backbone.Shortcuts</h1>
+
+<p><em>Backbone.js + Keymaster.js = Backbone.Shortcuts.</em></p>
+
+<h2>Downloads</h2>
+
+<ul>
+<li>
+<a href="https://raw.github.com/bry4n/backbone-shortcuts/master/backbone.shortcuts.js">Development Version</a> 1.031 kb, full source code</li>
+<li>
+<a href="https://raw.github.com/bry4n/backbone-shortcuts/master/backbone.shortcuts.min.js">Production Version</a> 0.577 kb, packed and gzipped</li>
+</ul><h2>Dependencies</h2>
+
+<ul>
+<li>
+<a href="http://underscorejs.org/">Underscore.js ~&gt; 1.3.1</a> for <code>_.extend()</code> function</li>
+<li>
+<a href="http://backbonejs.org/">Backbone.js ~&gt; 0.9.1</a> for <code>Backbone</code> class</li>
+<li>
+<a href="https://github.com/madrobby/keymaster/">Keymaster.js ~&gt; 1.0.2</a> for keyboard shortcuts functionality</li>
+</ul><h2>Usage</h2>
+
+<p><strong>HTML</strong></p>
+
+<p>Place snippets inside of the <code>&lt;head&gt;...&lt;/head&gt;</code> tags.</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"underscore.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"backbone.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"keymaster.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"backbone.shortcuts.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<p><strong>JavaScript</strong></p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">ShortcutKeys</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Shortcuts</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">shortcuts</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"ctrl+r"</span> <span class="o">:</span> <span class="s2">"reloadPage"</span>
+  <span class="p">},</span>
+  <span class="nx">reloadPage</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Reloaded!!"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">shortcuts</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ShortcutKeys</span><span class="p">;</span>
+</pre>
+</div>
+
+
+<p><strong>CoffeeScript</strong></p>
+
+<div class="highlight">
+<pre><span class="k">class</span> <span class="nx">ShortcutKeys</span> <span class="k">extends</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Shortcuts</span>
+  <span class="nv">shortcuts:</span>
+    <span class="s">"ctrl+r"</span> <span class="o">:</span> <span class="s">"reloadPage"</span>
+  <span class="nv">reloadPage: </span><span class="o">-&gt;</span> <span class="nx">alert</span> <span class="s">"Reload!!!"</span>
+
+<span class="nv">shortcuts = </span><span class="k">new</span> <span class="nx">ShortcutKeys</span>
+</pre>
+</div>
+
+
+<p>Finally, you can press <code>Ctrl + r</code> to execute <code>reloadPage()</code> function to see the alert message.</p>
+
+<h3>Use Backbone.Shortcuts as Delegation for your Backbone.View</h3>
+
+<p>You have to <code>_.extend</code> the <code>this</code> as <strong>desination</strong> and <code>new Backbone.Shortcuts</code> as <strong>source</strong> then finally call the delegate function <code>this.delegateShortcuts();</code>.</p>
+
+<p>See <a href="http://jsfiddle.net/bry4n/FAT7V/">My jsFiddle Example</a></p>
+
+<h2>Author</h2>
+
+<p>Bryan Goines, <a href="http://twitter.com/bryangoines">@bryangoines</a></p>
+
+<h2>License</h2>
+
+<p>Backbone.Shortcuts is licensed under MIT license.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/bry4n">bry4n</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
