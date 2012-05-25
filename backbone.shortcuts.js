@@ -21,6 +21,7 @@
         match = shortcut.match(/^(\S+)\s*(.*)$/);
         shortcutKey = match[1];
         scope = match[2] === "" ? "all" : match[2];
+        method = _.bind(method, this);
         _results.push(key(shortcutKey, scope, method));
       }
       return _results;
